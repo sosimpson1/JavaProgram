@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Add FLIGHT</title>
+</head>
+<body>
+<form action="#" th:action="@{/add-Flight}" th:object="${flight}" method="post">
+    <br>
+    <label for="id">id</label>
+    <input type="text" th:field="*{id}" id="id" placeholder="id">
+    <span th:if="${#fields.hasErrors('id')}" th:errors="*{id}"></span></br>
+    <br>
+    <label for="arrival_city">arrival_city</label>
+    <input type="text" th:field="*{arrival_city}" id="arrival_city" placeholder="arrival_city">
+    <span th:if="${#fields.hasErrors('arrival_city')}" th:errors="*{arrival_city}"></span></br>
+    <br>
+    <label for="date_of_departure">date_of_departure</label>
+    <input type="text" th:field="*{date_of_departure}" id="date_of_departure" placeholder="date_of_departure">
+    <span th:if="${#fields.hasErrors('date_of_departure')}" th:errors="*{date_of_departure}"></span></br>
+    <br>
+    <label for="departure_city">departure_city</label>
+    <input type="text" th:field="*{departure_city}" id="departure_city" placeholder="departure_city">
+    <span th:if="${#fields.hasErrors('departure_city')}" th:errors="*{departure_city}"></span></br>
+    <br>
+    <label for="estimated_departure_time">estimated_departure_time</label>
+    <input type="text" th:field="*{estimated_departure_time}" id="estimated_departure_time" placeholder="estimated_departure_time">
+    <span th:if="${#fields.hasErrors('estimated_departure_time')}" th:errors="*{estimated_departure_time}"></span></br>
+    <br>
+    <label for="flight_number">flight_number</label>
+    <input type="text" th:field="*{flight_number}" id="flight_number" placeholder="flight_number">
+    <span th:if="${#fields.hasErrors('flight_number')}" th:errors="*{flight_number}"></span></br>
+    <br>
+    <label for="operating_airlines">operating_airlines</label>
+    <input type="text" th:field="*{operating_airlines}" id="operating_airlines" placeholder="operating_airlines">
+    <span th:if="${#fields.hasErrors('arrival_city')}" th:errors="*{operating_airlines}"></span></br>
+    <input type="submit" value="submit">
+
+</form>
+
+</body>
+</html>
