@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Save data using JS</title> 
+</head>
+<body>
+  <h1>Sign up</h1>
+<form name="myForm">
+  Name:<br>
+  <input type="text" name="fname" required maxlength="40"><br><br>
+ E-mail: <input type="email" name="email" required><br><br>
+  Gender:<br>
+  <input type="radio" name="gender" value="male" checked> Male<br>
+  <input type="radio" name="gender" value="female"> Female<br><br>
+  <input type="submit" value="Submit">
+</form>
+<script>
+  $('input[type=submit]').click(function(){
+    var date = new Date();
+    date.setTime(date.getTime()+(1*24*60*60*1000));
+    createCookie('fname', $('input[name=fname]').val(), date);
+    createCookie('email', $('input[name=fname]').val(), date);
+    createCookie('gender', $('input:checked').val(), date);
+});
+</script>
+
+   
+</body>
+</html>
